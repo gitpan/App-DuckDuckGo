@@ -20,7 +20,7 @@ requires:
 resources:
   homepage: http://github.com/Getty/p5-app-duckduckgo/tree
   repository: git://github.com/Getty/p5-app-duckduckgo.git
-version: 0.001
+version: 0.002
 x_Dist_Zilla:
   plugins:
     -

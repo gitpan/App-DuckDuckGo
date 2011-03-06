@@ -3,7 +3,7 @@ BEGIN {
   $App::DuckDuckGo::AUTHORITY = 'cpan:GETTY';
 }
 BEGIN {
-  $App::DuckDuckGo::VERSION = '0.001';
+  $App::DuckDuckGo::VERSION = '0.002';
 }
 # ABSTRACT: Application to query DuckDuckGo
 
@@ -55,9 +55,23 @@ sub print_query {
 	my ( $self ) = @_;
 	return if !$self->has_query;
 	my $api = $self->api;
-	my $result = $self->duckduckgo->$api($self->query);
-	my $function = 'print_'.$self->api;
-	$self->$function($result);
+	eval {
+		my $result = $self->duckduckgo->$api($self->query);
+		my $function = 'print_'.$self->api;
+		$self->$function($result);
+	};
+	if ($@) {
+		print ' _____ ____  ____   ___  ____'."\n";
+		print '| ____|  _ \\|  _ \\ / _ \\|  _ \\'."\n";
+		print '|  _| | |_) | |_) | | | | |_) |'."\n";
+		print '| |___|  _ <|  _ <| |_| |  _ <'."\n";
+		print '|_____|_| \\_\\_| \\_\\\\___/|_| \\_\\'."\n";
+		print "\nAn error occured, we cant execute your query:\n\n";
+		print " ".$@."\n";
+		print "This is regulary not your fault, please try again later.\n";
+		print "If the problem stay, please report on https://github.com/Getty/p5-app-duckduckgo/issues\n\n";
+		exit 1;
+	}
 }
 
 sub print_zeroclickinfo {
@@ -178,7 +192,7 @@ App::DuckDuckGo - Application to query DuckDuckGo
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 AUTHOR
 
