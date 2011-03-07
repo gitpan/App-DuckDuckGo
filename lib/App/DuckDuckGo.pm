@@ -3,7 +3,7 @@ BEGIN {
   $App::DuckDuckGo::AUTHORITY = 'cpan:GETTY';
 }
 BEGIN {
-  $App::DuckDuckGo::VERSION = '0.002';
+  $App::DuckDuckGo::VERSION = '0.003';
 }
 # ABSTRACT: Application to query DuckDuckGo
 
@@ -182,7 +182,6 @@ sub zeroclickinfo_batch_icon_lines {
 1;
 
 
-
 __END__
 =pod
 
@@ -192,7 +191,16 @@ App::DuckDuckGo - Application to query DuckDuckGo
 
 =head1 VERSION
 
-version 0.002
+version 0.003
+
+=head1 SYNPOSIS
+
+  use App::DuckDuckGo;
+  App::DuckDuckGo->new_with_options->print_query_with_extra_argv;
+
+=head2 DESCRIPTION
+
+This is the class which is used by duckduckgo script to do the work. Please read L<duckduckgo> to get the documentation for the command line tool.
 
 =head1 AUTHOR
 
