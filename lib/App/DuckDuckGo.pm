@@ -3,23 +3,24 @@ BEGIN {
   $App::DuckDuckGo::AUTHORITY = 'cpan:GETTY';
 }
 BEGIN {
-  $App::DuckDuckGo::VERSION = '0.004';
+  $App::DuckDuckGo::VERSION = '0.005';
 }
 # ABSTRACT: Application to query DuckDuckGo
 
 use Moose;
 use WWW::DuckDuckGo;
-use Text::ASCIITable;
 
 with qw(
 	MooseX::Getopt
 );
 
+our $VERSION ||= '0.0development';
+
 has duckduckgo => (
 	metaclass => 'NoGetopt',
 	isa => 'WWW::DuckDuckGo',
 	is => 'ro',
-	default => sub { WWW::DuckDuckGo->new },
+	default => sub { WWW::DuckDuckGo->new( _http_agent_description => __PACKAGE__.'/'.$VERSION ) },
 );
 
 has query => (
@@ -191,7 +192,7 @@ App::DuckDuckGo - Application to query DuckDuckGo
 
 =head1 VERSION
 
-version 0.004
+version 0.005
 
 =head1 SYNPOSIS
 

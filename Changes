@@ -1,5 +1,9 @@
 Revision history for App-DuckDuckGo
 
+0.005     2011-03-07 18:32:56 Europe/Berlin
+	- Fixed stupid use
+	- Added own agent name
+
 0.004     2011-03-07 08:17:56 Europe/Berlin
 	- Fixed bug of non existing arrays
 
