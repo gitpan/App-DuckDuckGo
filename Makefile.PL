@@ -26,9 +26,9 @@ my %WriteMakefileArgs = (
   'PREREQ_PM' => {
     'Moose' => '1.24',
     'MooseX::Getopt' => '0.35',
-    'WWW::DuckDuckGo' => '0.001'
+    'WWW::DuckDuckGo' => '0.004'
   },
-  'VERSION' => '0.005',
+  'VERSION' => '0.006',
   'test' => {
     'TESTS' => 't/*.t'
   }

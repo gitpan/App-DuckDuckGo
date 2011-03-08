@@ -23,7 +23,7 @@
          "requires" : {
             "Moose" : "1.24",
             "MooseX::Getopt" : "0.35",
-            "WWW::DuckDuckGo" : "0.001"
+            "WWW::DuckDuckGo" : "0.004"
          }
       },
       "test" : {
@@ -41,7 +41,7 @@
          "web" : "http://github.com/Getty/p5-app-duckduckgo/tree"
       }
    },
-   "version" : "0.005",
+   "version" : "0.006",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
