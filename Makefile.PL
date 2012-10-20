@@ -4,33 +4,33 @@ use warnings;
 
 
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Application to query DuckDuckGo',
-  'AUTHOR' => 'Torsten Raudssus <torsten@raudssus.de>',
-  'BUILD_REQUIRES' => {
-    'Test::More' => '0.96'
+  "ABSTRACT" => "Application to query DuckDuckGo",
+  "AUTHOR" => "Torsten Raudssus <torsten\@raudssus.de>",
+  "BUILD_REQUIRES" => {
+    "Test::More" => "0.96"
   },
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'DISTNAME' => 'App-DuckDuckGo',
-  'EXE_FILES' => [
-    'bin/duckduckgo'
+  "DISTNAME" => "App-DuckDuckGo",
+  "EXE_FILES" => [
+    "bin/duckduckgo"
   ],
-  'LICENSE' => 'perl',
-  'NAME' => 'App::DuckDuckGo',
-  'PREREQ_PM' => {
-    'Moose' => '1.24',
-    'MooseX::Getopt' => '0.35',
-    'WWW::DuckDuckGo' => '0.004'
+  "LICENSE" => "perl",
+  "NAME" => "App::DuckDuckGo",
+  "PREREQ_PM" => {
+    "Moose" => "1.24",
+    "MooseX::Getopt" => "0.35",
+    "WWW::DuckDuckGo" => "0.004"
   },
-  'VERSION' => '0.006',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "0.007",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 

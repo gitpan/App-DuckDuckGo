@@ -2,8 +2,8 @@ package App::DuckDuckGo;
 BEGIN {
   $App::DuckDuckGo::AUTHORITY = 'cpan:GETTY';
 }
-BEGIN {
-  $App::DuckDuckGo::VERSION = '0.006';
+{
+  $App::DuckDuckGo::VERSION = '0.007';
 }
 # ABSTRACT: Application to query DuckDuckGo
 
@@ -92,6 +92,7 @@ sub print_zeroclickinfo {
 	
 		print "\n";
 
+        print "Redirected to: ".$zci->redirect."\n" if $zci->has_redirect;
 		if ($zci->has_answer) {
 			print "And the answer is:\n\n";
 			print $zci->answer."\n\n";
@@ -218,8 +219,8 @@ sub zeroclickinfo_batch_icon_lines {
 
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -228,7 +229,7 @@ App::DuckDuckGo - Application to query DuckDuckGo
 
 =head1 VERSION
 
-version 0.006
+version 0.007
 
 =head1 SYNPOSIS
 
@@ -251,4 +252,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
