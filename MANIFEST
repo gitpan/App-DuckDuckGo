@@ -10,3 +10,4 @@ dist.ini
 lib/App/DuckDuckGo.pm
 t/00-load.t
 t/release-pod-syntax.t
+weaver.ini

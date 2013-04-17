@@ -1,9 +1,9 @@
 package App::DuckDuckGo;
 BEGIN {
-  $App::DuckDuckGo::AUTHORITY = 'cpan:GETTY';
+  $App::DuckDuckGo::AUTHORITY = 'cpan:DDG';
 }
 {
-  $App::DuckDuckGo::VERSION = '0.007';
+  $App::DuckDuckGo::VERSION = '0.008';
 }
 # ABSTRACT: Application to query DuckDuckGo
 
@@ -219,8 +219,8 @@ sub zeroclickinfo_batch_icon_lines {
 
 1;
 
-__END__
 
+__END__
 =pod
 
 =head1 NAME
@@ -229,7 +229,7 @@ App::DuckDuckGo - Application to query DuckDuckGo
 
 =head1 VERSION
 
-version 0.007
+version 0.008
 
 =head1 SYNPOSIS
 
@@ -246,9 +246,10 @@ Torsten Raudssus <torsten@raudssus.de>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by L<Raudssus Social Software|http://www.raudssus.de/>.
+This software is copyright (c) 2013 by L<DuckDuckGo Inc.|https://duckduckgo.com/>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
+
